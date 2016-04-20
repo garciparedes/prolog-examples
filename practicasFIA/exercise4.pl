@@ -30,6 +30,8 @@ es(pollo, X).
 
 es(Z, X) :- come(Y, Z), noMata(Z).
 
-estaVivo(guillermo) :- come(guillermo,cacahuetes).
+estaVivo(guillermo).
+
+come(guillermo,cacahuetes).
 
 come(susana, X) :- come(guillermo, X).
