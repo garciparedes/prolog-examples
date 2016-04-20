@@ -15,6 +15,7 @@ Funciones:
     es(X, Y)            X es Y
     come(X, Y)          X come Y
     noMata(X)           X no mata
+    estaVivo(X)         X esta vivo
 
 Pregunta:
     leGusta(juan, cacahuetes).
@@ -29,6 +30,6 @@ es(pollo, X).
 
 es(Z, X) :- come(Y, Z), noMata(Z).
 
-come(guillermo, cacahuetes), noMata(cacahuetes).
+estaVivo(guillermo) :- come(guillermo,cacahuetes).
 
-come(susana, T) :- come(guillermo, T).
+come(susana, X) :- come(guillermo, X).
