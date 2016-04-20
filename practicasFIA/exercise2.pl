@@ -14,6 +14,8 @@ Funciones:
     amigoDe(X,Y)        X es amigo de Y
     trabajaCon(X,Y)     X trabaja con Y
 
+Pregunta:
+    viveEnCasaDe(X, manolo).
 */
 
 viveEnCasaDe(X, manolo) :- ayudaA(X, juan).

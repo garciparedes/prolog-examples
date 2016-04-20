@@ -13,6 +13,8 @@ Funciones:
     enseña(X, Y)        X enseña Y
     esDe(X, Y)          X es de Y
 
+Pregunta:
+    inteligente(X).
 */
 
 enseña(juan, algoritmos).
