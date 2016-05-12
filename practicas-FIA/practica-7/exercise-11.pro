@@ -1,4 +1,16 @@
+/*
 
+Practicas Prolog FIA:
+
+Practica 7:
+    Ejercicio 11
+
+Consultas:
+    ganaMenosDe(10,X).
+    ganaMasDe(1000,X).
+    ingresosFamiliaDe(laura, I).
+    ingresosFamiliaDe(belen, I).
+*/
 
 libro_de_familia(
     esposo(nombre(antonio,garcia,fernandez),profesion(arquitecto),salario(30000)),
