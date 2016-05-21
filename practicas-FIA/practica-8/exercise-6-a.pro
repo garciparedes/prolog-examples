@@ -2,10 +2,11 @@
 Author:
     Sergio García Prado
     garciparedes.me
-    Practicas Prolog FIA:
+
+Practicas Prolog FIA:
 
     Practica 8:
-        Ejercicio 5
+        Ejercicio 6 a
 
 */
 
