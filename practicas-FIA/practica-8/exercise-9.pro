@@ -6,7 +6,7 @@ Author:
 Practicas Prolog FIA:
 
     Practica 8:
-        Ejercicio 8
+        Ejercicio 9
 
 */
 
