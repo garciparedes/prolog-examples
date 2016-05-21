@@ -21,5 +21,5 @@ ruta(Ciudad1, Ciudad2, DistanciaTotal):-
 
 ruta(Ciudad1, Ciudad2, DistanciaTotal):-
     enlace(Ciudad1, CiudadM, D1),
-    enlace(CiudadM, Ciudad2, D2),
+    ruta(CiudadM, Ciudad2, D2),
     DistanciaTotal is D1 + D2.
