@@ -7,12 +7,9 @@ Practica 8:
 
 */
 
-insertar(Elem, [], Result):-
-    Result = [Elem].
+insertar(Elem, [], [Elem]).
 
-insertar(Elem, [H|T], Result):-
-    Result = [Elem|[H|T]].
+insertar(Elem, [H|T], [Elem|[H|T]]).
 
-insertar(Elem, [H|T], Result):-
-    insertar(Elem, T, R),
-    Result = [H|R].
+insertar(Elem, [H|T], [H|R]):-
+    insertar(Elem, T, R).
