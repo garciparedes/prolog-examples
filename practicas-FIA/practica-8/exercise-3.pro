@@ -1,4 +1,7 @@
 /*
+Author:
+    Sergio García Prado (@garciparedes)
+    http://garciparedes.me
 
 Practicas Prolog FIA:
 
@@ -7,8 +10,7 @@ Practica 8:
 
 */
 
-sumAll([], SumResult):-
-    SumResult is 0.
+sumAll([], 0).
 
 sumAll([X|Y], SumResult):-
     sumAll(Y, S),
