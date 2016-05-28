@@ -17,12 +17,12 @@ Pregunta:
     inteligente(X).
 */
 
-enseña(juan, algoritmos).
+ensena(juan, algoritmos).
 
-enseña(mujerDeJuan, inteligenciaArtificial).
+ensena(mujerDeJuan, inteligenciaArtificial).
 
 esDe(algoritmos, matematicas).
 
 esDe(inteligenciaArtificial, informatica).
 
-inteligente(X) :- enseña(X, Y), esDe(Y, informatica).
+inteligente(X) :- ensena(X, Y), esDe(Y, informatica).
