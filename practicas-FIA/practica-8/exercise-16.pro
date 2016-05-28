@@ -1,7 +1,7 @@
 /*
 Author:
-    Sergio García Prado
-    garciparedes.me
+    Sergio García Prado (@garciparedes)
+    http://garciparedes.me
 
 Practicas Prolog FIA:
 
@@ -15,7 +15,7 @@ maximo([H1, H2], H1):-
 
 maximo([H1, H2], H2):-
     H1 < H2.
-    
+
 
 maximo([H1, H2|T], R):-
     H1 > H2,
