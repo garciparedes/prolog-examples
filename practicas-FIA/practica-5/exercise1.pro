@@ -25,4 +25,6 @@ esDe(algoritmos, matematicas).
 
 esDe(inteligenciaArtificial, informatica).
 
+inteligente(X).
+
 inteligente(X) :- enseña(X, Y), esDe(Y, informatica).
