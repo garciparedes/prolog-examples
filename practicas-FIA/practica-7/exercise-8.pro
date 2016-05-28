@@ -30,7 +30,7 @@ esJefeDe(responsableComercial, vendedor2).
 
 
 dependeDe(X, Y):-
-    esJefeDe(Y, X.
+    esJefeDe(Y, X).
 
 dependeDe(X, Y):-
     esJefeDe(Y, Z), dependeDe(X, Z).
