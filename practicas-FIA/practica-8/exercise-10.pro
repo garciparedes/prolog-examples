@@ -10,10 +10,8 @@ Practicas Prolog FIA:
 
 */
 
-genAscendingList(Num, Lista):-
-    Lista = [Num].
+genAscendingList(Num, [Num]).
 
-genAscendingList(Num, Lista):-
+genAscendingList(Num, [Num|L]):-
     N is Num + 1,
-    genAscendingList(N, L),
-    Lista = [Num|L].
+    genAscendingList(N, L).

@@ -10,9 +10,8 @@ Practica 8:
 
 */
 
-insertar(Elem, [], [Elem]).
 
-insertar(Elem, [H|T], [Elem|[H|T]]).
+insertar(E, L, [E|L]).
 
-insertar(Elem, [H|T], [H|R]):-
-    insertar(Elem, T, R).
+insertar(E, [H|T], [H|R]):-
+    insertar(E, T, R).

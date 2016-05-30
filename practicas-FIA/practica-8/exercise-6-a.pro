@@ -11,14 +11,7 @@ Practicas Prolog FIA:
 */
 
 
-descomponer([H|T], Lista1, Lista2):-
-    T \= [],
-    Lista1 = [H],
-    Lista2 = T.
+descomponer([_|T], [], T).
 
-
-
-descomponer([H|T], Lista1, Lista2):-
-    descomponer(T, L1, L2),
-    Lista1 = [H|L1],
-    Lista2 = L2.
+descomponer([H|T], [H|L1], L2):-
+    descomponer(T, L1, L2).

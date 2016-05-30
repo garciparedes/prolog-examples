@@ -10,11 +10,8 @@ Practicas Prolog FIA:
 
 */
 
-removeByIndex(0, [_|T], Result):-
-    Result = T.
+removeByIndex(0, [_|T], T).
 
-removeByIndex(Index, [H|T], Result):-
-    Index > 0,
-    I is Index -1,
-    removeByIndex(I, T, R),
-    Result = [H|R].
+removeByIndex(Index, [H|T], [H|R]):-
+    I is Index - 1,
+    removeByIndex(I, T, R).
