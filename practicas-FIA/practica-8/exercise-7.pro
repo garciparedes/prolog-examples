@@ -10,10 +10,7 @@ Practicas Prolog FIA:
 
 */
 
-generaLista(Elem, [H|T], Result):-
-    Elem = H,
-    Result = [].
+generaLista(H, [H|_], []).
 
-generaLista(Elem, [H|T], Result):-
-    generaLista(Elem, T, R),
-    Result = [H| R].
+generaLista(Elem, [H|T], [H|R]):-
+    generaLista(Elem, T, R).

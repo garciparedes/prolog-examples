@@ -10,10 +10,8 @@ Practicas Prolog FIA:
 
 */
 
-genDecreasingList(Num, Lista):-
-    Lista = [Num].
+genDecreasingList(Num, [Num]).
 
-genDecreasingList(Num, Lista):-
+genDecreasingList(Num, [Num|L]):-
     N is Num - 1,
-    genDecreasingList(N, L),
-    Lista = [Num|L].
+    genDecreasingList(N, L).
