@@ -1,7 +1,6 @@
 /*
 Author:
-    Sergio García Prado (@garciparedes)
-    http://garciparedes.me
+    Jorge Cabrera. Univ. de la Palmas de Gran Canarias)
 
 Practicas Prolog FIA:
 
