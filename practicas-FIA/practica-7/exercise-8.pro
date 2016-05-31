@@ -31,6 +31,11 @@ esJefeDe(operario2, reparto2).
 esJefeDe(responsableComercial, vendedor1).
 esJefeDe(responsableComercial, vendedor2).
 
+esJefe(X, Z):-
+    esJefeDe(X, Z).
+
+esJefe(X, Z):-
+    esJefeDe(X, Y),esJefe(Y,Z).
 
 dependeDe(X, Y):-
     esJefeDe(Y, X).
