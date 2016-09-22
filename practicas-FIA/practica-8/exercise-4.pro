@@ -13,5 +13,5 @@ Practica 8:
 
 borrar(H, [H|T], T).
 
-borrar(Elem, [H|T], [H|R]):-
-    borrar(Elem, T, R).
+borrar(E, [H|T], [H|R]):-
+    borrar(E, T, R).
