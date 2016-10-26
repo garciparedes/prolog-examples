@@ -12,7 +12,7 @@ Prácticas Prolog ICO
 */
 solve_traza_nivel(A):- solve(A, 0).
 
-solve(true, Deep):-!.
+solve(true, _):-!.
 solve((A, B), Deep) :-!,
     Deep2 is Deep + 1,
     solve(A, Deep2),
