@@ -14,9 +14,12 @@ Prácticas Prolog ICO
 :-op(40, xfy, &).
 :-op(50, xfy, --->).
 
-solve(true):- !.
-solve((A & B)) :- !, solve(A), solve(B).
-solve(A):- !, (B ---> A), solve(B).
+dsolve(true, D, D ):-!.
+dsolve((A & B), D1, D2) :- !, dsolve(A, D1, DA), dsolve(B, D1, DB), union(DA, DB, D2).
+dsolve(A, D1, D2) :- (B ---> A),  dsolve(B, D1, D2).
+dsolve(A, D1, D2) :-!, A = ok(_), union([A], D1, D2).
+
+
 
 /*
 * Ejercicio
@@ -44,7 +47,6 @@ true ---> down(s1).
 true ---> up(s2).
 true ---> up(s3).
 
-true ---> ok(_).
 
 
 up(s2) & ok(s2) ---> connected_to(w0,w1).
