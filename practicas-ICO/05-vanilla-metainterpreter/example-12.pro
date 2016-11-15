@@ -7,18 +7,12 @@ Prácticas Prolog ICO
 */
 
 /*
-* Meta Interprete Vanilla-Proof
+* Meta Interprete Vanilla with inverted evaluation order
 */
-solve(true, true):-!.
+solve(true):- !.
+solve((A,B)):- !, solve(B), solve(A).
+solve(A):- !, clause(A,B), solve(B).
 
-solve((A,B), (AC, BC)):-!,
-    solve(A, AC),
-    solve(B, BC).
-
-
-solve(A, (A :- C)):-
-    clause(A,B),
-    solve(B,C).
 
 /*
 * Ejemplo

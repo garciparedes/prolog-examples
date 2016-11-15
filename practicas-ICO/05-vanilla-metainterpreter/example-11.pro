@@ -6,19 +6,20 @@ Author:
 Prácticas Prolog ICO
 */
 
+
 /*
-* Meta Interprete Vanilla-Proof
+* Meta Interprete Vanilla with max deep
 */
-solve(true, true):-!.
+solve(true, Deep):-!, Deep >= 0.
 
-solve((A,B), (AC, BC)):-!,
-    solve(A, AC),
-    solve(B, BC).
+solve((A,B), Deep):-!,
+    solve(A, Deep),
+    solve(B, Deep).
 
 
-solve(A, (A :- C)):-
+solve(A,Deep) :-
     clause(A,B),
-    solve(B,C).
+    solve(B,Deep-1).
 
 /*
 * Ejemplo
