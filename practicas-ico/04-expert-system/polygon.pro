@@ -21,16 +21,27 @@ nombre(rombo):- nombre(paralelogramo), ladosIguales(4).
 nombre(cuadrado):- nombre(rombo), nombre(rectangulo).
 
 
-ladosIguales(X):- ask(ladosIguales, '¿Cuantos lados iguales tiene la figura? ', X).
-anguloRecto(X):- ask(anguloRecto, '¿La figura posee angulos rectos (si, no)? ', X).
-ladosParalelos(X):- ask(ladosParalelos, '¿Cuantos lados paralelos tiene la figura (0, 2 o 4)? ', X).
-orden(X):-ask(orden, '¿Cuantos lados? ', X).
+ladosIguales(X):- ask('¿Cuantos lados iguales tiene la figura? ', ladosIguales, X).
+anguloRecto(X):- ask('¿La figura posee angulos rectos (si, no)? ', anguloRecto, X).
+ladosParalelos(X):- ask('¿Cuantos lados paralelos tiene la figura (0, 2 o 4)? ', ladosParalelos, X).
+orden(X):-ask('¿Cuantos lados? ', orden, X).
 
-ask(Pred, _, X):- memory(Pred, X).
-ask(Pred, _, _):- memory(Pred,_), !, fail.
-ask(Pred, Question, X):- write(Question), read(Y), asserta(memory(Pred, Y)), X == Y.
 
-solve:-
+ask(_,Pred, X):-
+    memory(Pred, X).
+
+ask(_, Pred, _):-
+    memory(Pred,_),
+    !,
+    fail.
+
+ask(Question, Pred , X):-
+    write(Question),
+    read(Y),
+    asserta(memory(Pred, Y)),
+    X == Y.
+
+solve :-
     retractall(memory(_,_)),
     findall(X, nombre(X), R),
     write(R).
